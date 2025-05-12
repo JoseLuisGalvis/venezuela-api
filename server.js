@@ -1,1 +1,25 @@
-﻿// ============================// server.js (entry point)// npm install node-fetch@2// ============================const express = require("express");const cors = require("cors");const sitiosRoutes = require("./routes/sitiosRoutes");require("dotenv").config();const app = express();const port = process.env.PORT || 3000;app.use(  cors({    origin: ["https://welcomevzla.vercel.app", "http://127.0.0.1:5501"],  }));// Rutasapp.use("/", sitiosRoutes);app.listen(port, () => {  console.log(`Servidor escuchando en http://localhost:${port}`);});
+﻿// ============================
+// server.js (entry point)
+// npm install node-fetch@2
+// ============================
+
+const express = require("express");
+const cors = require("cors");
+const sitiosRoutes = require("./routes/sitiosRoutes");
+require("dotenv").config();
+
+const app = express();
+const port = process.env.PORT || 3000;
+
+app.use(
+  cors({
+    origin: ["https://welcomevzla.vercel.app", "http://127.0.0.1:5501"],
+  })
+);
+
+// Rutas
+app.use("/", sitiosRoutes);
+
+app.listen(port, () => {
+  console.log(`Servidor escuchando en el puerto ${port}`);
+});
