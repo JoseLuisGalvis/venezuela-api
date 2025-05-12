@@ -1,0 +1,1 @@
+﻿const fetch = require("node-fetch");exports.fetchJSON = async (url) => {  const response = await fetch(url);  if (!response.ok) {    const data = await response.json();    throw {      status: response.status,      message: data.error || "Error al obtener datos externos",    };  }  return response.json();};

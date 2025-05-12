@@ -1,0 +1,1 @@
+﻿// utils/logger.jsconst log = (message) => {  const timestamp = new Date().toISOString();  console.log(`[INFO] [${timestamp}] ${message}`);};const error = (message) => {  const timestamp = new Date().toISOString();  console.error(`[ERROR] [${timestamp}] ${message}`);};module.exports = { log, error };

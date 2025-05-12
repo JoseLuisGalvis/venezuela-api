@@ -1,0 +1,14 @@
+# Archivo .gitattributes
+
+# Detectar automáticamente texto y binarios
+* text=auto
+
+# Fuerza LF para archivos de código comunes
+*.js text eol=lf
+*.json text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+*.sh text eol=lf
+
+# Archivos específicos que pueden dar problemas
+controllers/sitiosController.js text eol=lf
